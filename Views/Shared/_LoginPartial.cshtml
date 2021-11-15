@@ -1,0 +1,34 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="dropdown text-end">
+        <a class="text-white dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Welcome @User.Identity?.Name!</a>
+        <ul class="dropdown-menu text-small show" aria-labelledby="dropdownUser" data-popper-placement="bottom-end"  style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 34px);">
+            <li>
+                <a class="dropdown-item" asp-area="Identity">Account</a>
+            </li>
+            <li>
+                <a class="dropdown-item" asp-area="Identity">Wish lists</a>
+            </li>
+            <li>
+                <a class="dropdown-item" asp-area="Identity">Orders</a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <form  class="form-inline dropdown-item" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+}
+else
+{
+    <div class="text-end">
+        <a class="btn btn-secondary text-white" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        <a class="btn btn-light text-dark" asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
+    </div>
+}
