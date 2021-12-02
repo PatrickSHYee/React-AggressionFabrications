@@ -5,6 +5,7 @@
 @if (SignInManager.IsSignedIn(User))
 {
     <div class="dropdown text-end">
+        A made up company with a made up website
         <a class="text-white dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Welcome @User.Identity?.Name!</a>
         <ul class="dropdown-menu text-small show" aria-labelledby="dropdownUser" data-popper-placement="bottom-end"  style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 34px);">
             <li>
@@ -28,6 +29,7 @@
 else
 {
     <div class="text-end">
+        <span>Welcome, Guest to my made up company</span>
         <a class="btn btn-secondary text-white" asp-area="Identity" asp-page="/Account/Login">Login</a>
         <a class="btn btn-light text-dark" asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
     </div>

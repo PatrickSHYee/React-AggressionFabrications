@@ -1,7 +1,199 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-    By default, I would like the page to open with a default page. If the user has selected a certain year and make for a vehicle, I would like the page to be that and not this one.
+grid-templatens, I would like the page to open with a default page. If the user has selected a certain year and make for a vehicle, I would like the page to be that and not this one.
 *@
 @{
     ViewData["Title"] = "Many selections for many vehicles";
 }
+<div class="container-fluid pb-3">
+    <div class="d-grid gap-3 text-center" style="grid-template-columns: 1fr 2fr;">
+        <div class="flex-shrink-0 p-3 border rounded-3">
+            <div class="accordion" id="subjectAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingHonda">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#honda-collapse" aria-aria-expanded="false" aria-controls="honda-collapse">
+                            <h2>Honda & Acura</h2>
+                        </button>
+                    </h2>
+                    <div id="honda-collapse" class="accordion-collapse collapse" aria-labelledby="headingHonda" data-bs-parent="subjectAccordion">
+                        <div class="accordion-body">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#MDX" class="link-secondary text-decoration-none rounded">MDX</a></li>
+                                <li><a href="#RDX" class="link-secondary text-decoration-none rounded">RDX</a></li>
+                                <li><a href="#Pilot" class="link-secondary text-decoration-none rounded">Pilot</a></li>
+                                <li><a href="#Ridgeline" class="link-secondary text-decoration-none rounded">Ridgeline</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingToyota">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toyota-collapse" aria-expanded="false" aria-controls="toyota-collapse">
+                            <h2>Toyota & Lexus</h2>
+                        </button>
+                    </h2>
+                    <div id="toyota-collapse" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">4Runner</a></li>
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">Tacoma</a></li>
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">GX</a></li>
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">LX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id=headingDodge>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dodge-collapse" aria-
+                            <h2>Dodge, Jeep, & Ram</h2>
+                        </button>
+                    </h2>
+                </div>
+            </div>
+            <ul class="list-unstyled ps-0">
+                <li>
+                    
+                    <div class="collapse" id="dodge-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Durango</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Wrangler</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Ram 1500</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Ram 2500</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="btn btn-toggle alight-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#ford-collapse" aria-expanded="false">
+                        <h2>Ford</h2>
+                    </button>
+                    <div class="collapse" id="ford-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Bronco</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Ranger</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">F-150</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Mustang</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="btn btn-toggle alight-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#chevy-collapse" aria-expanded="false">
+                        <h2>Chevy & GMC</h2>
+                    </button>
+                    <div class="collapse" id="chevy-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Tahoe & Yukon</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Silverado & Sierra</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Coloardo & Canyon</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Camero & Corvette</a></li>
+                        </ul>
+                    </div>
+                <li>
+                    <button class="btn btn-toggle alight-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#anv-collapse" aria-expanded="false">
+                        <h2>Audio & Video</h2>
+                    </button>
+                    <div class="collapse" id="anv-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Stereos</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Amps, Speakers, & Subwoofers</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Car Cameras & Montiors</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="btn btn-toggle alight-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#merch-collapse" aria-expanded="false">
+                        <h2>Merch & Recovery</h2>
+                    </button>
+                    <div class="collapse" id="merch-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Recovery & Accessories</a></li>
+                            <li><a href="#" class="link-secondary text-decoration-none rounded">Merch</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="g-col-sm-9 shadow-lg bg-light border rounded-3">
+            <div id="home" class="container">
+                <h1 class="text-center">Products</h1>
+                <p class="text-left">Items for car enthusiasts from trucks, SUV, and cars. Even though some to most of the descriptions for the products are made up. I want to make this website to be mind, if I owned the shop and store. I like hybrid and overland bumpers for the SUV and trucks. Hybrid bumpers are like pre runner bumpers, where they give little protection to the front end of the vehicle like the sides. I think they look cool, exposing the tires and some of the suspension. Overland bumpers are fully protected bumpers. Hybrid and overland bumpers give more an aggressive look to the vehicle. I would like to fabricated hybrid bumpers for cars to give them a more aggressive look and better protection.</p>
+                <p class="text-left">Other products that gear heads would like are audio and video. I have comprise a selection of aftermarket audio that a normal consumer would not get at Car Toys or Best Buy. These car audio are seen more on competitive car audio, where they say that it is a dirty sound. I feel that they are just lower costing product that produce similar or better sound of their bigger and more popular brothers.</p>
+            </div>
+            <div id="MDX" class="">
+                <h2 class="text-center">Acura MDX</h2>
+            </div>
+            <div id="RDX" class="">
+                <h2>Acura RDX</h2>
+            </div>
+            <div id="Ridgeline" class="">
+                <h2>Honda Ridgeline</h2>
+            </div>
+            <div id="Pilot" class="">
+                <h2>Honda Pilot</h2>
+            </div>
+            <div id="4Runner" class="">
+                <h2>Toyota 4Runner</h2>
+            </div>
+            <div id="Tacoma" class="">
+                <h2>Toyota Tacoma</h2>
+            </div>
+            <div id="GX" class="">
+                <h2>Lexus GX 460 & GX 470</h2>
+            </div>
+            <div id="LX" class="">
+                <h2>Lexus LX</h2>
+            </div>
+            <div id="Durango" class="">
+                <h2>Dodge Durango</h2>
+            </div>
+            <div id="Wrangler" class="">
+                <h2>Jeep Wrangler</h2>
+            </div>
+            <div id="Ram1500" class="">
+                <h2>Ram 1500</h2>
+            </div>
+            <div id="Ram2500" class="">
+                <h2>Ram2500</h2>
+            </div>
+            <div id="Bronco" class="">
+                <h2>Ford Bronco</h2>
+            </div>
+            <div id="Ranger" class="">
+                <h2>Ford Ranger</h2>
+            </div>
+            <div id="F-150" class="">
+                <h2>Ford F-150</h2>
+            </div>
+            <div id="Mustang" class="">
+                <h2>Ford Mustang</h2>
+            </div>
+            <div id="Tahoe" class="">
+                <h2>Chevy Tahoe & GMC Yukon</h2>
+            </div>
+            <div id="Sierra" class="">
+                <h2>Chevy Silverado & GMC Sierra</h2>
+            </div>
+            <div id="Colorado" class="">
+                <h2>Chevy Colorado & GMC Canyon</h2>
+            </div>
+            <div id="Corvette" class="">
+                <h2>Chevy Camero & Corvette</h2>
+            </div>
+            <div id="Stereos" class="">
+                <h2>Steroes</h2>
+            </div>
+            <div id="Speakers" class="">
+                <h2>Amps, Speakers, & Subwoofers</h2>
+            </div>
+            <div id="Video" class="">
+                <h2>Car Cameras & Monitors</h2>
+            </div>
+            <div id="Acc" class="">
+                <h2>Recovery & Accessories</h2>
+            </div>
+            <div id="Merch" class="">
+                <h2>Merch</h2>
+            </div>
+        </div>
+    </div>
+</div>
