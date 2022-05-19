@@ -5,40 +5,58 @@ grid-templatens, I would like the page to open with a default page. If the user 
 @{
     ViewData["Title"] = "Many selections for many vehicles";
 }
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="topSymbol" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zM2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4z"/>
+    </symbol>
+</svg>
+
 <div class="container-fluid pb-3">
-    <div class="d-grid gap-3 text-center" style="grid-template-columns: 1fr 2fr;">
-        <div class="flex-shrink-0 p-3 border rounded-3">
-            <div class="accordion" id="subjectAccordion">
+    <div class="d-grid gap-3 text-center" style="grid-template-columns: 0.5fr 2fr;">
+        <div class="flex-shrink-0 p-3 border-0">
+            <div class="accordion position-fixed" id="subjectAccordion">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingHonda">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#honda-collapse" aria-aria-expanded="false" aria-controls="honda-collapse">
-                            <h2>Honda & Acura</h2>
-                        </button>
-                    </h2>
-                    <div id="honda-collapse" class="accordion-collapse collapse" aria-labelledby="headingHonda" data-bs-parent="subjectAccordion">
-                        <div class="accordion-body">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#MDX" class="link-secondary text-decoration-none rounded">MDX</a></li>
-                                <li><a href="#RDX" class="link-secondary text-decoration-none rounded">RDX</a></li>
-                                <li><a href="#Pilot" class="link-secondary text-decoration-none rounded">Pilot</a></li>
-                                <li><a href="#Ridgeline" class="link-secondary text-decoration-none rounded">Ridgeline</a></li>
-                            </ul>
-                        </div>
+                    <div class="accordion-body text-end">
+                        <a href="#" class="link-primary text-decoration-none">
+                            <svg width="24" height="24" fill="currentColor" class="bi">
+                                <use xlink:href="#topSymbol"></use>
+                            </svg>
+                            @*<svg width="24" height="24" fill="currentColor" class="bi d-block mx-auto mb-1">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    Home*@
+                        </a>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingToyota">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toyota-collapse" aria-expanded="false" aria-controls="toyota-collapse">
-                            <h2>Toyota & Lexus</h2>
+                            Toyota & Lexus
                         </button>
                     </h2>
                     <div id="toyota-collapse" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">4Runner</a></li>
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">Tacoma</a></li>
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">GX</a></li>
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">LX</a></li>
+                                <li><a href="#4Runner" class="link-secondary text-decoration-none rounded">4Runner & GX</a></li>
+                                <li><a href="#Tacoma" class="link-secondary text-decoration-none rounded">Tacoma</a></li>
+                                <li><a href="#LX" class="link-secondary text-decoration-none rounded">Sequoia, Land Cruiser & LX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingChevy">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chevy-collapse" aria-expanded="false" aria-controls="chevy-collapse">
+                            Chevy, GMC, & Cadillac
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="chevy-collapse">
+                        <div class="accordion-body">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">Tahoe & Yukon</a></li>
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">Silverado & Sierra</a></li>
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">Colorado & Canyon</a></li>
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">Camero & Corvette</a></li>
                             </ul>
                         </div>
                     </div>
@@ -46,13 +64,13 @@ grid-templatens, I would like the page to open with a default page. If the user 
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingDodge">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dodge-collapse" aria-expanded="false" aria-controls="dodge-collapse">
-                            <h2>Dodge, Jeep, & Ram</h2>
+                            Dodge, Jeep, & Ram
                         </button>
                     </h2>
                     <div class="accordion-collapse collapse" id="dodge-collapse">
                         <div class="accordion-body">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">Durango</a></li>
+                                <li><a href="#" class="link-secondary text-decoration-none rounded">Durango & Grand Cherokee</a></li>
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">Wrangler</a></li>
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">Ram 1500</a></li>
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">Ram 2500</a></li>
@@ -63,7 +81,7 @@ grid-templatens, I would like the page to open with a default page. If the user 
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFord">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ford-collapse" aria-expanded="false" aria-controls="ford-collapse">
-                            <h2>Ford</h2>
+                            Ford & Lincoln
                         </button>
                     </h2>
                     <div class="accordion-collapse collapse" id="ford-collapse">
@@ -72,24 +90,44 @@ grid-templatens, I would like the page to open with a default page. If the user 
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">Bronco</a></li>
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">Ranger</a></li>
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">F-150</a></li>
+                                <li><a href="#explorder" class="link-secondary text-decoration-none rounded">Explorer & Aviator</a></li>
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">Mustang</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingChevy">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chevy-collapse" aria-expanded="false" aria-controls="chevy-collapse">
-                            <h2>Chevy & GMC</h2>
+                    <h2 class="accordion-header" id="headingNissan">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#nissan-collapse" aria-expanded="false" aria-controls="nissan-collapse">
+                            Nissan & Infiniti
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="chevy-collapse">
+                    <div id="nissan-collapse" class="accordion-collapse collapse" aria-labelledby="headingNissan" data-bs-parent="subjectAccordion">
+                        <div class="accordion-body">
+                            <ul class="btn-toggle-nav list-unstyled fw-fst-normal pb-1 small">
+                                <li><a href="#frontier" class="link-secondary text-decoration-none rounded">Frontier</a></li>
+                                <li><a href="#titan" class="link-secondary text-decoration-none rounded">Titan & Armada</a></li>
+                                <li><a href="#pathfinder" class="link-secondary text-decoration-none rounded">Pathfinder & </a></li>
+                                <li><a href="#350z" class="link-secondary text-decoration-none rounded">350z, 370z, & </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingWheels">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wheels-collapse" aria-expanded="false" aria-controls="s-collapse">
+                            Wheels & Tires
+                        </button>
+                    </h2>
+                    <div id="wheels-collapse" class="accordion-collapse collapse" aria-labelledby="headingWheels" data-bs-parent="subjectAccordion">
                         <div class="accordion-body">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">Tahoe & Yukon</a></li>
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">Silverado & Sierra</a></li>
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">Coloardo & Canyon</a></li>
-                                <li><a href="#" class="link-secondary text-decoration-none rounded">Camero & Corvette</a></li>
+                                <li><a href="#blackRhino" class="link-secondary text-decoration-none rounded">Black Rhino Wheels</a></li>
+                                <li><a href="#moto" class="link-secondary text-decoration-none rounded">Moto Metal Wheels</a></li>
+                                <li><a href="#proComp" class="link-secondary text-decoration-none rounded">Pro Comp Wheels & Tires</a></li>
+                                <li><a href="#BFG" class="link-secondary text-decoration-none rounded">BF Goodrich Tires</a></li>
+                                <li><a href="#Nitto" class="link-secondary text-decoration-none rounded">Nitto Tires</a></li>
+                                <li><a href="#mickey" class="link-secondary text-decoration-none rounded">Mickey Thompson Tires</a></li>
                             </ul>
                         </div>
                     </div>
@@ -97,10 +135,10 @@ grid-templatens, I would like the page to open with a default page. If the user 
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingAudio">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#audio-collapse" aria-expanded="false" aria-controls="audio-collapse">
-                            <h2>Chevy & GMC</h2>
+                            Audio & Video
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="audio-collapse">
+                    <div class="accordion-collapse collapse" id="audio-collapse" aria-labelledby="headingAudio" data-bs-parent="subjectAccordion">
                         <div class="accordion-body">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">Stereos</a></li>
@@ -113,10 +151,10 @@ grid-templatens, I would like the page to open with a default page. If the user 
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingMerch">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#merch-collapse" aria-expanded="false" aria-controls="merch-collapse">
-                            <h2>Merch & Recovery</h2
-                        </button>
+                            Merch & Recovery
+                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="merch-collapse">
+                    <div class="accordion-collapse collapse" id="merch-collapse" aria-labelledby="headingMerch" data-bs-parent="subjectAccordion">
                         <div class="accordion-body">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="#" class="link-secondary text-decoration-none rounded">Recovery & Accessories</a></li>
@@ -128,34 +166,20 @@ grid-templatens, I would like the page to open with a default page. If the user 
             </div>
         </div>
         <div class="g-col-sm-9 shadow-lg bg-light border rounded-3">
-            <div id="home" class="container">
+            <div id="top" class="container">
                 <h1 class="text-center">Products</h1>
-                <p class="text-left">Items for car enthusiasts from trucks, SUV, and cars. Even though some to most of the descriptions for the products are made up. I want to make this website to be mind, if I owned the shop and store. I like hybrid and overland bumpers for the SUV and trucks. Hybrid bumpers are like pre runner bumpers, where they give little protection to the front end of the vehicle like the sides. I think they look cool, exposing the tires and some of the suspension. Overland bumpers are fully protected bumpers. Hybrid and overland bumpers give more an aggressive look to the vehicle. I would like to fabricated hybrid bumpers for cars to give them a more aggressive look and better protection.</p>
-                <p class="text-left">Other products that gear heads would like are audio and video. I have comprise a selection of aftermarket audio that a normal consumer would not get at Car Toys or Best Buy. These car audio are seen more on competitive car audio, where they say that it is a dirty sound. I feel that they are just lower costing product that produce similar or better sound of their bigger and more popular brothers.</p>
-            </div>
-            <div id="MDX" class="">
-                <h2 class="text-center">Acura MDX</h2>
-            </div>
-            <div id="RDX" class="">
-                <h2>Acura RDX</h2>
-            </div>
-            <div id="Ridgeline" class="">
-                <h2>Honda Ridgeline</h2>
-            </div>
-            <div id="Pilot" class="">
-                <h2>Honda Pilot</h2>
+                <p class="text-left">Products for car enthusiasts from trucks, SUV, and cars. Some to most of the descriptions for the products are made up. I want to make this website to be mine like if I owned the shop and store. Most of the photos are going to from Instagram – personal and company profiles.</p>
+                <p class="text-left">Items that also gear heads would like are audio and video. I have comprise a selection of aftermarket audio that a normal consumer would not get at Car Toys or Best Buy. These car audio are seen more on competitive car audio, where they say that it is a dirty sound. I feel that they are just lower costing product that produce similar or better sound of their bigger and more popular brothers.</p>
+                <p class="text-left">I threw together brands that I like and some that I think are pretty cool.</p>
             </div>
             <div id="4Runner" class="">
-                <h2>Toyota 4Runner</h2>
+                <h2>Toyota 4Runner, Lexus GX 460 & 470</h2>
             </div>
             <div id="Tacoma" class="">
                 <h2>Toyota Tacoma</h2>
             </div>
-            <div id="GX" class="">
-                <h2>Lexus GX 460 & GX 470</h2>
-            </div>
             <div id="LX" class="">
-                <h2>Lexus LX</h2>
+                <h2>Toyota Sequoia, Toyota Land Cruiser & Lexus LX 460, 470, & 570</h2>
             </div>
             <div id="Durango" class="">
                 <h2>Dodge Durango</h2>
@@ -167,7 +191,7 @@ grid-templatens, I would like the page to open with a default page. If the user 
                 <h2>Ram 1500</h2>
             </div>
             <div id="Ram2500" class="">
-                <h2>Ram2500</h2>
+                <h2>Ram 2500</h2>
             </div>
             <div id="Bronco" class="">
                 <h2>Ford Bronco</h2>
